@@ -7,10 +7,13 @@ export default {
         './storage/framework/views/*.php',
         './resources/**/*.blade.php',
         './resources/**/*.js',
-        './resources/**/*.vue',
     ],
     theme: {
         extend: {
+            colors: {
+                "henge": "hsl(204, 71%, 53%);",
+                "henge-darker": "hsl(204, 71%, 45%);",
+            },
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },

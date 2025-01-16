@@ -6,6 +6,16 @@ export default defineConfig({
         laravel({
             input: ['resources/css/app.css', 'resources/js/app.js'],
             refresh: true,
+            input: [
+                {
+                    condition: file => file.includes('resources/lang'),
+                    handle: () => callArtisan(findPhpPath(), 'i18n:generate'),
+                },
+                {
+                    condition: file => file.includes('routes/'),
+                    handle: () => callArtisan(findPhpPath(), 'routes:generate'),
+                },
+            ],
         }),
     ],
 });
