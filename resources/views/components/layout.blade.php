@@ -20,7 +20,7 @@
 
         @livewireStyles
     </head>
-    <body class="h-full bg-gray-100">
+    <body class="h-full bg-gray-100 dark:bg-black dark:text-white/80">
         {{ $slot }}
 
         @livewireScripts
