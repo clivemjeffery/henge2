@@ -20,8 +20,20 @@
 
         @livewireStyles
     </head>
-    <body class="h-full bg-gray-100 dark:bg-black dark:text-white/80">
-        {{ $slot }}
+    <body class="h-full bg-blue-200 dark:bg-blue-950 dark:text-white/80">
+        <x-nav>
+            <x-nav-pebble year="1"/>
+            <x-nav-pebble year="2"/>
+            <x-nav-pebble year="3"/>
+            <x-nav-pebble year="4"/>
+            <x-nav-pebble year="5"/>
+            <x-nav-pebble year="6"/>
+        </x-nav>
+
+        <div>
+            {{ $slot }}
+        </div>
+        
 
         @livewireScripts
     </body>

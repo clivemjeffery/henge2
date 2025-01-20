@@ -1,4 +1,4 @@
-<nav class="bg-henge"
+<nav class="bg-sky-500"
   x-data="{ isOpen: false }"
   x-resize.document="isOpen = false"
 >
@@ -9,7 +9,7 @@
           <x-logo />
         </div>
         <div class="flex items-baseline ml-4 space-x-4">
-          <x-nav-link class="text-lg text-white">Norton CP School</x-nav-link>
+          <x-nav-link href="/" class="text-lg text-white">Norton CP School</x-nav-link>
         </div>
         <div class="hidden md:block">
           <div class="flex items-baseline ml-10 space-x-4">
@@ -19,7 +19,7 @@
       </div>
       <div class="flex items-center">
         <div class="hidden md:block">
-          <x-nav-link>Login</x-nav-link>
+          <x-nav-link href="/login">Login</x-nav-link>
         </div>
       </div>
       <div class="flex -mr-2 md:hidden">
