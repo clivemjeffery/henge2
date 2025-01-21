@@ -1,0 +1,1 @@
+<div class="mt-6 text-lg flex justify-center">{{ $slot }}</div>

@@ -1,4 +1,4 @@
-<nav class="bg-henge"
+<nav class="bg-sky-500"
   x-data="{ isOpen: false }"
   x-resize.document="isOpen = false"
 >
@@ -9,17 +9,20 @@
           <x-logo />
         </div>
         <div class="flex items-baseline ml-4 space-x-4">
-          <x-nav-link class="text-lg text-white">Norton CP School</x-nav-link>
+          <x-nav-link href="/" class="text-lg text-white">Norton CP School</x-nav-link>
         </div>
         <div class="hidden md:block">
           <div class="flex items-baseline ml-10 space-x-4">
             {{ $slot }}
           </div>
         </div>
-        <x-nav-link>Login</x-nav-link>
+      </div>
+      <div class="flex items-center">
+        <div class="hidden md:block">
+          <x-nav-link href="/login">Login</x-nav-link>
+        </div>
       </div>
       <div class="flex -mr-2 md:hidden">
-        
         <!-- Mobile menu button -->
         <button type="button" class="relative inline-flex items-center justify-center p-2 text-gray-400 bg-gray-800 rounded-md hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" aria-controls="mobile-menu" aria-expanded="false"
           @click="isOpen = !isOpen"
@@ -43,9 +46,7 @@
     </div>
   </div>
   <!-- Mobile menu, show/hide based on menu state. -->
-  <div :class="{'block': isOpen, 'hidden': !isOpen }" id="mobile-menu"
-
-  >
+  <div :class="{'block': isOpen, 'hidden': !isOpen }" id="mobile-menu">
     <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
       {{ $slot }}
     </div>
