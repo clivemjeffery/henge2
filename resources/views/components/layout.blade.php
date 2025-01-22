@@ -11,12 +11,8 @@
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
         <!-- Styles / Scripts -->
-        @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
             @vite(['resources/css/app.css', 'resources/js/app.js'])
-        @else
-            <!-- not sure what should go here -->
-            @vite(['resources/css/app.css', 'resources/js/app.js'])
-        @endif
+        
 
         @livewireStyles
     </head>
@@ -31,6 +27,9 @@
         </x-nav>
 
         <div>
+
+            {!! Vite::asset('resources/css/app.css') !!}
+
             {{ $slot }}
         </div>
         
