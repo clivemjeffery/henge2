@@ -9,6 +9,7 @@
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+        <link href="https://fonts.bunny.net/css?family=abeezee:400,400i|figtree:300" rel="stylesheet" />
 
         <!-- Styles / Scripts -->
             @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -26,11 +27,13 @@
             <x-nav-pebble year="6"/>
         </x-nav>
 
-        <div>
+        <div class="font-serif">
 
             {!! Vite::asset('resources/css/app.css') !!}
 
-            {{ $slot }}
+            <div class="italic">
+                {{ $slot }}
+            </div>
         </div>
         
 

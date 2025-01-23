@@ -16,6 +16,7 @@ export default {
             },
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                serif: ['AbeeZee', ...defaultTheme.fontFamily.serif]
             },
         },
     },
