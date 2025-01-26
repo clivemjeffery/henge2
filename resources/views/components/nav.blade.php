@@ -19,7 +19,12 @@
       </div>
       <div class="flex items-center">
         <div class="hidden md:block">
-          <x-nav-link href="/login">Login</x-nav-link>
+          @guest
+            <x-nav-link href="/login">Login</x-nav-link>
+          @endguest
+          @auth
+            <x-nav-link href="/user">{{ Auth::user()->name_pref }}</x-nav-link>
+          @endauth
         </div>
       </div>
       <div class="flex -mr-2 md:hidden">

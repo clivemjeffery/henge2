@@ -12,26 +12,34 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->id();
+            $table->id()->primary();
             $table->string('name_first');
             $table->string('name_last');
-            $table->string('name_pref');
-            $table->string('names_middle');
-            $table->string('gender');
+            $table->string('name_pref')->nullable();
+            $table->string('names_middle')->nullable();
+            $table->string('gender')->nullable();
 
-            $table->datetime('dob');
+            $table->datetime('dob')->nullable();
 
-            $table->boolean('is_student')->default(true);
-            $table->integer('adno');
-            $table->string('upn')->unique();
+            $table->string('user_type')->default('pupil');
+            $table->integer('adno')->nullable();
+            $table->string('upn')->unique()->nullable(); // should allow mutiple nulls
 
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->string('spass');
+            $table->string('password')->nullable(); // null for pupil and ms graph logins
+            $table->string('child_password')->nullable(); // null for adults
             $table->rememberToken();
+
+            $table->string('reg')->nullable(); // school class or 'registration group' from SIMS
+            $table->string('house')->nullable(); // simplifying by storing as string not object
+            $table->string('year')->nullable(); // switching to string from henge-egg's int
     
             $table->timestamps();
+
+            $table->index('adno');
+            $table->index('name_last');
+            $table->index('name_first');
         });
 
         Schema::create('password_reset_tokens', function (Blueprint $table) {
