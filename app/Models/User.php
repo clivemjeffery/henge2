@@ -18,10 +18,16 @@ class User extends Authenticatable
      * @var list<string>
      */
     protected $fillable = [
+        'upn',
+        'adno',
         'name_first',
         'name_last',
         'names_middle',
         'name_pref',
+        'year',
+        'dob',
+        'reg',
+        'house',
         'email',
         'password',
     ];
@@ -48,4 +54,5 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+    
 }
