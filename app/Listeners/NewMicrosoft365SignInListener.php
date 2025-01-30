@@ -16,6 +16,7 @@ class NewMicrosoft365SignInListener
             'name_pref' => $event->token['info']['displayName'],
             'email' => $event->token['info']['mail'] ?? $event->token['info']['userPrincipalName'],
             'password' => '',
+            'user_type' => 'staff',
         ];
 
         $user = User::firstOrCreate(['email' => $info['email']], $info);
