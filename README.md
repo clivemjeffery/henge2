@@ -29,3 +29,8 @@ Honestly, it looks liek the link at the top has the most accessible approach to 
 It works! And with a single tenant app, something I never had in Henge Egg. There will be some tidying up to do before testing on the school server.
 
 In particular, I need to support users who log in the other way(s).
+
+## Working on Livewire
+
+Doing the "Livewire 3 from Scratch" Laracast with Jeremy McPeak.
+Up to USING FULL PAGE COMPONENTS Ep 7 just before creating the full page comp at about halfway.

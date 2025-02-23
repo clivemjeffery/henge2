@@ -2,13 +2,14 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PupilController;
+use App\Livewire\PupilSearch;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/pupils', [PupilController::class, 'index'])->name('pupils');
+Route::get('/pupilSearch', PupilSearch::class);
 
 Route::group(['middleware' => ['web', 'guest']], function(){
     Route::get('/login', [AuthController::class, 'login'])->name('login');
