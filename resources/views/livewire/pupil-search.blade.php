@@ -19,7 +19,7 @@
     <div class="mt-4">
         @foreach($pupils as $pupil)
         <div class="pt-2">
-            <a href="/users/{{$pupil->id}}">{{ $pupil->name_first}}</a>
+            <a href="/pupils/{{$pupil->id}}">{{ $pupil->name_first}}</a>
             {{ $pupil->name_last}}
             ({{ $pupil->reg }})
         </div>

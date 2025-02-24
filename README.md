@@ -33,4 +33,6 @@ In particular, I need to support users who log in the other way(s).
 ## Working on Livewire
 
 Doing the "Livewire 3 from Scratch" Laracast with Jeremy McPeak.
-Up to USING FULL PAGE COMPONENTS Ep 7 just before creating the full page comp at about halfway.
+Up to USING FULL PAGE COMPONENTS Ep 7 just before creating the full page comp at about halfway. Finished that 24/02.
+
+Watched the next episode where Jeremy moved the search feature to the layout so that you can search from any page. It was mainly to demonstrate breaking the component down and how to pass data between components and others nested inside them. It is probably worth doing, though might not translate into a useful feature for Henge.
