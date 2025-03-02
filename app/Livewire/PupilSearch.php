@@ -4,6 +4,7 @@ namespace App\Livewire;
 
 use App\Models\User;
 use Illuminate\Contracts\Database\Eloquent\Builder;
+use Livewire\Attributes\On;
 use Livewire\Attributes\Validate;
 use Livewire\Component;
 
@@ -11,8 +12,8 @@ class PupilSearch extends Component
 {
     #[Validate('required')]
     public $searchText = '';
-
     public $pupils = [];
+    public $placeholder;
 
     public function updatedSearchText($value) {
         $this->reset('pupils');
@@ -20,6 +21,11 @@ class PupilSearch extends Component
         $this->validate();
         
         $searchTerm = "%{$value}%";
+
+        // Naive query right now...
+        // It doesn't support typing a full name because it compares
+        // to the fields individually. It needs to detect whitespace
+        // and do something more brainy.
 
         $this->pupils = User::where('user_type', 'pupil')
             ->where('name_first', 'LIKE', $searchTerm)
@@ -37,6 +43,7 @@ class PupilSearch extends Component
             ->get();   
     }
 
+    #[On('search:clear-results')]
     public function clear() {
         $this->reset('searchText', 'pupils');
     }

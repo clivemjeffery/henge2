@@ -16,7 +16,10 @@
         @livewireStyles
         
     </head>
-    <body class="h-full bg-blue-200 dark:bg-blue-950 dark:text-white/80">
+    <body
+        class="h-full bg-blue-200 dark:bg-blue-950 dark:text-white/80"
+        x-data x-on:click="$dispatch('search:clear-results')"
+    >
         <x-nav>
             <x-nav-pebble year="1"/>
             <x-nav-pebble year="2"/>
@@ -26,7 +29,16 @@
             <x-nav-pebble year="6"/>
         </x-nav>
 
-        <div class="font-serif">
+        <livewire:pupil-search placeholder="Type to search">
+
+        <h1 class="text-xl text-white">
+            This page is using the layout for single page vite components.
+        </h1>
+        <p>It has a 'generic' search bar at the top, following Jeremy's idea.</p>
+        <p>Furthermore, it now uses alpine to dispatch livewire events - the search clear.</p>
+        <div><code>views/layouts/app.blade.php</code></div>
+
+        <div class="mt-4 font-serif">
 
             {!! Vite::asset('resources/css/app.css') !!}
 

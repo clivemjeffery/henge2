@@ -10,9 +10,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// Trad style controller route
+Route::get('/pupils', [PupilController::class, 'index']);
+
 // Livewire Routes
-Route::get('/pupilSearch', PupilSearch::class);
 Route::get('/pupils/{user}', ShowPupil::class);
+
+// this route is redundant, a legacy of the search component buildup
+Route::get('/pupilSearch', PupilSearch::class);
+
 
 // Login routes for Microsoft
 Route::group(['middleware' => ['web', 'guest']], function(){

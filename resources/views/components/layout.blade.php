@@ -26,9 +26,14 @@
             <x-nav-pebble year="6"/>
         </x-nav>
 
-        <div class="font-serif">
+        <h1 class="text-xl text-white">
+            This page is using the  layout for traditional blade views.
+        </h1>
+        <div><code>views/layout.blade.php</code>
 
-            {!! Vite::asset('resources/css/app.css') !!}
+        <div class="mt-4 font-serif">
+
+            
 
             <div class="italic">
                 {{ $slot }}

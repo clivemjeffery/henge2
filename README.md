@@ -36,3 +36,9 @@ Doing the "Livewire 3 from Scratch" Laracast with Jeremy McPeak.
 Up to USING FULL PAGE COMPONENTS Ep 7 just before creating the full page comp at about halfway. Finished that 24/02.
 
 Watched the next episode where Jeremy moved the search feature to the layout so that you can search from any page. It was mainly to demonstrate breaking the component down and how to pass data between components and others nested inside them. It is probably worth doing, though might not translate into a useful feature for Henge.
+
+26/2 Just moved it on a bit by reviewing which layout each of the working pages is using.
+
+I'm still not sure about the universal search and how it fits with my prototype layout. It looks like Jeremy is only going to have livewire components, so the trad controller routes and views won't appear in his demo app. Current thought: go with that and work from the app.layout.php. Maybe put the 'universal search' under the nav bar for now.
+
+02/03 Up to the end of 'Using Events' which look amazing. Livewire and Alpine.js working in perfect harmony. I learned how to give Livewire components reactive properties, how to nest components and send both static and dynamic data to them (basically, the Blade way). Then how to dispatch events and respond to them with Alpine.
