@@ -24,7 +24,7 @@ However, it does include a dependency on a library by some lot calling themselve
 
 I think I've  now found the docs to the MS one. Not easy to follow, though.
 
-Honestly, it looks liek the link at the top has the most accessible approach to doing what I'd like. Back to it.
+Honestly, it looks like the link at the top has the most accessible approach to doing what I'd like. Back to it.
 
 It works! And with a single tenant app, something I never had in Henge Egg. There will be some tidying up to do before testing on the school server.
 
