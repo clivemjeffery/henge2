@@ -7,10 +7,12 @@
     
     
         @foreach($pupils as $pupil)
-        <div class="pt-2">
-            <a href="/pupils/{{$pupil->id}}">{{ $pupil->name_first}}</a>
-            {{ $pupil->name_last}}
-            ({{ $pupil->reg }})
+        <div class="pt-2" wire:key="{{$pupil->id}}">
+            <a wire:navigate href="/pupils/{{$pupil->id}}">
+                {{ $pupil->name_first}}
+                {{ $pupil->name_last}}
+                ({{ $pupil->reg }})
+            </a>
         </div>
         @endforeach
     </div>

@@ -2,7 +2,8 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PupilController;
-use App\Livewire\PupilSearch;
+use App\Livewire\PupilCreate;
+use App\Livewire\PupilIndex;
 use App\Livewire\ShowPupil;
 use Illuminate\Support\Facades\Route;
 
@@ -14,10 +15,9 @@ Route::get('/', function () {
 Route::get('/pupils', [PupilController::class, 'index']);
 
 // Livewire Routes
+Route::get('/pupils-lw', PupilIndex::class);
+Route::get('/pupils/create', PupilCreate::class);
 Route::get('/pupils/{user}', ShowPupil::class);
-
-// this route is redundant, a legacy of the search component buildup
-Route::get('/pupilSearch', PupilSearch::class);
 
 
 // Login routes for Microsoft

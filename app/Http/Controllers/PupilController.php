@@ -11,4 +11,8 @@ class PupilController extends Controller
         $pupils = User::where('user_type', 'pupil')->get();
         return view('pupils.index', ['pupils' => $pupils]);
     }
+
+    public function create() {
+        dd('Aha!');
+    }
 }
